@@ -1,0 +1,468 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('../font/NanumBarunGothic.otf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'NanumBarunGothic';
+    color: #000;
+}
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+/* 전체 감싸는 친구 */
+.wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+}
+/* 컨텐츠 감싸는 친구 */
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 1400px;
+}
+.more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* 헤더 디자인 */
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    z-index: 4;
+}
+.headerTop {
+    width: 100%;
+    height: 45px;
+}
+header .logo {
+    height: 45px;
+    float: left;
+    line-height: 45px;
+}
+header .logo img {
+    margin-top: 10px;
+    height: 35px;
+}
+.headerMenu {
+    margin-top: 20px;
+    float: right;
+}
+.headerMenu li {
+    float: left;
+    border-left: 1px solid #ccc;
+}
+.headerMenu li:first-child {
+    border: none;
+}
+.headerMenu li a {
+    padding: 0px 20px;
+    font-size: 15px;
+}
+.headerBottom {
+    width: 100%;
+    height: 55px;
+}
+header .mainTab li {
+    box-sizing: border-box;
+    height: 55px;
+    line-height: 65px;
+    text-align: center;
+    padding: 0px 10px;
+    float: left;
+    cursor: pointer;
+}
+header .mainTab li:first-child {
+    padding-left: 0px;
+}
+header ~ nav {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    padding-bottom: 50px;
+    z-index: 4;
+    background-color: #fff;
+    display: none;
+}
+.MenuWrap {
+    display: none;
+    overflow: auto;
+}
+.mainMenu {
+    width: 100%;
+    height: auto;
+}
+.mainMenu > li {
+    display: block;
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.mainMenu > li > span {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    display: block;
+}
+.mainMenu li:last-child .imgWrap {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.subMenu li {
+    position: relative;
+    padding: 5px 0;
+}
+.subMenu li a {
+    padding: 5px 0;
+    padding-right: 10px;
+}
+.hidden {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000003b;
+    z-index: 3;
+    display: none;
+}
+/* section 디자인 */
+section {
+    width: 100%;
+    box-sizing: border-box;
+}
+article {
+    margin: 100px 0px;
+}
+article:last-child {
+    margin-bottom: 0;
+}
+/* 이미지슬라이드 디자인 */
+.imgslide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 540px;
+    background: linear-gradient(to right, #d6d6d6 30%, #9198e500 60%), url(../images/imgslide01.jpg);
+    background-size: 100% auto;
+    background-position: 0% 40%;
+}
+.imgslide img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+}
+/* article안에 들어가는 제목 크기 */
+.title {
+    width: 100%;
+}
+.title h1 {
+    font-size: 28px;
+}
+.title h3 {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+/* product 디자인 */
+.product ul {
+    margin-top: 30px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+.product ul li {
+    border: 1px solid black;
+}
+.product ul li::after {
+    position: relative;
+    display: block;
+    content: " ";
+    padding-bottom: 90%;
+}
+.product .titleWrap {
+    display: none;
+}
+/* .product ul li {
+    overflow: hidden;
+    flex: 1;
+    max-height: 445px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #cfcfcf;
+} */
+/* .product ul li:last-child {
+    margin-right: 0px;
+} */
+/* .product ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.product ul li a .imgWrap {
+    position: relative;
+    width: 100%;
+    max-height: 335px;
+    overflow: hidden;
+}
+.product ul li .imgWrap img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: none;
+}
+.product ul li:last-child .imgWrap img {
+    left: 30%;
+}
+.product ul li a .titleWrap {
+    box-sizing: border-box;
+    padding: 30px;
+}
+.product ul li a .titleWrap h3 {
+    font-size: 20px;
+}
+.product ul li a .titleWrap span {
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #767676;
+} */
+/* review 디자인 */
+.reviewWrap::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 8px;
+    background-color: #c1c1c1;
+}
+.reviewWrap::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 8px;
+}
+.review ul {
+    position: relative;
+    margin-top: 40px;
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.review ul li .imgwrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.review ul li .imgwrap::after {
+    position: relative;
+    display: block;
+    content: ' ';
+    padding-bottom: 100%;
+}
+.review ul li .imgwrap img {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+}
+.review span {
+    color: #767676;
+    font-weight: bold;
+    font-size: 15px;
+}
+.review h2 {
+    margin-top: 5px;
+    font-size: 20px;
+}
+/* promotion 디자인 */
+.promotion .wrap {
+    height: 190px;
+    background: linear-gradient(to right, #d9e0e2 30%, #9198e500 60%), url(../images/promotion.jpg);
+    background-size: cover;
+    background-position: 0 55%;
+    border-radius: 20px;
+}
+.promotion .wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 150px;
+}
+.promotion .wrap a h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+.promotion .wrap a span {
+    color: #5a5959;
+}
+/* info 디자인 */
+.info {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 0px;
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+.info .title {
+    margin-top: 50px;
+    width: 400px;
+    float: left;
+}
+.info ul {
+    float: left;
+    display: flex;
+    width: 1000px;
+}
+.info ul li {
+    flex: 1;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.info ul li:last-child {
+    margin: 0;
+}
+.info ul li a {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.info ul li a img {
+    position: absolute;
+    right: 40px;
+    height: 110px;
+    bottom: 20px;
+}
+.info ul li:first-child a img {
+    height: 180px;
+    bottom: 10px;
+}
+/* footer 디자인 */
+footer {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    border-top: 1px solid #dddddd;
+}
+.topButton {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px #cfcfcf;
+    right: -70px;
+    bottom: 50px;
+    background-color: #fff;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+@media screen and (max-width:1600px) {
+    /* 전체 감싸는 친구 */
+    .wrapper {
+        width: 100%;
+    }
+    /* 컨텐츠 감싸는 친구 */
+    .wrap {
+        width: 90%;
+    }
+    /* article안에 들어가는 제목 크기 */
+    .title {
+        width: 100%;
+    }
+    .info ul {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:1280px) {
+    .info {
+        padding: 60px 0px;
+    }
+    .info ul {
+        display: block;
+    }
+    .info ul li {
+        width: 100%;
+    }
+    .info ul li:last-child {
+        margin-top: 20px;
+    }
+    /* .product {
+        overflow: auto;
+    }
+    .product ul {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+    }
+    .product ul {
+        display: block;
+    }
+    .product ul li {
+        display: block;
+        width: 100%;
+        height: 70vw;
+        margin-bottom: 20px;
+        float: left;
+    }
+    .product ul li a .imgWrap {
+        height: 60vw;
+    } */
+    .reviewWrap {
+        width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 10px;
+    }
+    .review ul {
+        width: 130%;
+    }
+    .review ul li .imgwrap {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:1000px) {
+    /* .product ul li a .imgWrap {
+        height: 54vw;
+    } */
+}
+@media screen and (max-width:768px) {
+    .review ul {
+        width: 250%;
+    }
+    .review ul {
+        gap: 8px;
+    }
+    .promotion .wrap, .promotion .wrap a, .review ul li .imgwrap, .product ul li {
+        border-radius: 10px;
+    }
+}
